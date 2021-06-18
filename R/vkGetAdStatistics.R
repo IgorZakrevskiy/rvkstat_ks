@@ -103,7 +103,8 @@ vkGetAdStatistics <- function(
     if(!is.null(dataRaw$error)){
       stop(paste0("Error ", dataRaw$error$error_code," - ", dataRaw$error$error_msg))
     }
-    
+    print  (dataRaw)
+	  
     # parsing 
     temp <- tibble(response = dataRaw$response) %>%
             unnest_wider("response") %>%
