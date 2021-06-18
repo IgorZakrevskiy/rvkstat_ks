@@ -103,8 +103,9 @@ vkGetAdStatistics <- function(
     if(!is.null(dataRaw$error)){
       stop(paste0("Error ", dataRaw$error$error_code," - ", dataRaw$error$error_msg))
     }
-    print  (dataRaw)
-	  
+    
+if   (length(dataRaw) > 55)
+	{
     # parsing 
     temp <- tibble(response = dataRaw$response) %>%
             unnest_wider("response") %>%
@@ -113,7 +114,7 @@ vkGetAdStatistics <- function(
     
     # append to result
     result <- append(result, list(temp))
-    
+    }
     Sys.sleep(2) #vk limit
     
   }
