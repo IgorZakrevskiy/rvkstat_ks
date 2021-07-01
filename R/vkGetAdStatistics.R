@@ -104,7 +104,8 @@ vkGetAdStatistics <- function(
       stop(paste0("Error ", dataRaw$error$error_code," - ", dataRaw$error$error_msg))
     }
     
-	message(dataRaw)
+	message(dataRaw$response[[1]]$stats)
+	  
 if   (length(dataRaw$response[[1]]$stats) > 0)
 	{
     # parsing 
@@ -122,7 +123,7 @@ if   (length(dataRaw$response[[1]]$stats) > 0)
   
   # collect result
   result <- bind_rows(result) 
-  
+  message(result)
   # data type mismatch handler 
   if (nrow(result) > 0) {
     
