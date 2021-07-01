@@ -104,13 +104,14 @@ vkGetAdStatistics <- function(
       stop(paste0("Error ", dataRaw$error$error_code," - ", dataRaw$error$error_msg))
     }
     
-	message(length(dataRaw))
-	message(dataRaw$response)
 	message(dataRaw)
-	 message(typeof(dataRaw)) 
+
 #if   (length(dataRaw$response[[1]]$stats) > 0)
 #	{
     # parsing 
+	   tryCatch(
+    
+    {
     temp <- tibble(response = dataRaw$response) %>%
             unnest_wider("response") %>%
             unnest_longer("stats") %>%
@@ -119,6 +120,15 @@ vkGetAdStatistics <- function(
     # append to result
     result <- append(result, list(temp))
 #    }
+	    }
+, error = function(ex) 
+{
+  # here 'ex' is an instance of 'simpleError'
+  message(as.character(ex))
+  message(ex$message)
+}
+		   
+		   
     Sys.sleep(2) #vk limit
     
   }
