@@ -105,7 +105,9 @@ vkGetAdStatistics <- function(
     }
     
 	message(length(dataRaw))
-	  
+	message(dataRaw$response)
+	message(dataRaw)
+	 message(typeof(dataRaw)) 
 if   (length(dataRaw$response[[1]]$stats) > 0)
 	{
     # parsing 
