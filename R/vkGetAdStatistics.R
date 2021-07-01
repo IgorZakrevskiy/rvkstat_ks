@@ -104,6 +104,7 @@ vkGetAdStatistics <- function(
       stop(paste0("Error ", dataRaw$error$error_code," - ", dataRaw$error$error_msg))
     }
     
+	print( paste0(dataRaw))
 if   (length(dataRaw$response[[1]]$stats) > 0)
 	{
     # parsing 
