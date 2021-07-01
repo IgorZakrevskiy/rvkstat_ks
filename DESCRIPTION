@@ -1,4 +1,4 @@
-Package: rvkstat_ks
+Package: rvkstat
 Type: Package
 Title: R Interface to API 'vk.com'
 Version: 3.0.1
