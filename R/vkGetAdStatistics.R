@@ -108,8 +108,8 @@ vkGetAdStatistics <- function(
 	message(dataRaw$response)
 	message(dataRaw)
 	 message(typeof(dataRaw)) 
-if   (length(dataRaw$response[[1]]$stats) > 0)
-	{
+#if   (length(dataRaw$response[[1]]$stats) > 0)
+#	{
     # parsing 
     temp <- tibble(response = dataRaw$response) %>%
             unnest_wider("response") %>%
@@ -118,7 +118,7 @@ if   (length(dataRaw$response[[1]]$stats) > 0)
     
     # append to result
     result <- append(result, list(temp))
-    }
+#    }
     Sys.sleep(2) #vk limit
     
   }
