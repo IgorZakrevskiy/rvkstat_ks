@@ -1,24 +1,24 @@
-\name{rvkstat-package}
-\alias{rvkstat-package}
-\alias{rvkstat}
+\name{rvkstat_ks-package}
+\alias{rvkstat_ks-package}
+\alias{rvkstat_ks}
 \docType{package}
 \title{
-\packageTitle{rvkstat}
+\packageTitle{rvkstat_ks}
 }
 \description{
-\packageDescription{rvkstat}
+\packageDescription{rvkstat_ks}
 }
 \details{
 
 The DESCRIPTION file:
-\packageDESCRIPTION{rvkstat}
-\packageIndices{rvkstat}
+\packageDESCRIPTION{rvkstat_ks}
+\packageIndices{rvkstat_ks}
 
 }
 \author{
-\packageAuthor{rvkstat}
+\packageAuthor{rvkstat_ks}
 
-Maintainer: \packageMaintainer{rvkstat}
+Maintainer: \packageMaintainer{rvkstat_ks}
 }
 
 \keyword{ package }
