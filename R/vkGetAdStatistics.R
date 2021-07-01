@@ -126,7 +126,7 @@ vkGetAdStatistics <- function(
   # here 'ex' is an instance of 'simpleError'
   message(as.character(ex))
   message(ex$message)
-}
+})
 		   
 		   
     Sys.sleep(2) #vk limit
