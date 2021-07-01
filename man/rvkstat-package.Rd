@@ -1,6 +1,6 @@
-\name{rvkstat_ks-package}
-\alias{rvkstat_ks-package}
-\alias{rvkstat_ks}
+\name{rvkstat-package}
+\alias{rvkstat-package}
+\alias{rvkstat}
 \docType{package}
 \title{
 \packageTitle{rvkstat}
